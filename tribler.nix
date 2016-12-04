@@ -45,6 +45,10 @@ stdenv.mkDerivation rec {
     libtorrentRasterbar # contains python bindings
     _libnacl
     _leveldb
+
+    # packages below are optional, used for testing
+    python27Packages.nose
+    python27Packages.nose-exclude
   ];
   LD_LIBRARY_PATH="${libsodium}/lib:${vlc}/lib";
 }
